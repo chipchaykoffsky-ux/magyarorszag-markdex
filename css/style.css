@@ -1400,10 +1400,10 @@ ul, ol { list-style: none; }
 /* ========== Platform media (HD trading screenshot) ========== */
 .platform-media {
     position: relative;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    aspect-ratio: 16/10;
+    aspect-ratio: 21/9;
     border: 1px solid var(--border-strong);
     box-shadow: var(--shadow-card), 0 20px 60px -20px rgba(0, 229, 255, 0.3);
 }
@@ -1437,7 +1437,7 @@ ul, ol { list-style: none; }
     display: block;
     aspect-ratio: 21/9;
     object-fit: cover;
-    filter: brightness(0.75);
+    filter: brightness(0.9);
     transition: transform 8s ease-out;
 }
 .city-banner:hover img { transform: scale(1.05); }
@@ -1490,8 +1490,8 @@ ul, ol { list-style: none; }
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at center, transparent 30%, rgba(10, 11, 30, 0.7) 100%),
-        linear-gradient(180deg, transparent 50%, rgba(10, 11, 30, 0.5));
+        radial-gradient(ellipse at center, transparent 50%, rgba(10, 11, 30, 0.5) 100%),
+        linear-gradient(180deg, transparent 70%, rgba(10, 11, 30, 0.3));
     pointer-events: none;
 }
 @keyframes coinsZoom {
@@ -1619,9 +1619,17 @@ ul, ol { list-style: none; }
     .showcase { padding: 48px 0; }
     .showcase__stats { gap: 24px; flex-wrap: wrap; }
     .highlight { padding: 48px 0; }
-    .city-banner { margin-bottom: 40px; }
-    .city-banner__overlay { padding: 20px; background: linear-gradient(180deg, rgba(10,11,30,.3) 0%, rgba(10,11,30,.9) 70%); justify-content: flex-end; align-items: center; text-align: center; }
-    .city-banner__title { max-width: 100%; }
+    .city-banner { margin-bottom: 32px; }
+    .city-banner img { aspect-ratio: 4/5; filter: brightness(0.85); }
+    .city-banner__overlay {
+        padding: 24px;
+        background: linear-gradient(180deg, transparent 0%, transparent 50%, rgba(10,11,30,.88) 100%);
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+    }
+    .city-banner__title { max-width: 100%; font-size: 22px; margin-bottom: 10px; }
+    .city-banner__sub { font-size: 14px; }
     .coins-banner { aspect-ratio: 16/9; margin-bottom: 32px; }
 
     .hero__pitch { padding: 24px 22px; border-radius: 20px; margin: 28px 0 32px; }
