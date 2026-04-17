@@ -1362,38 +1362,31 @@ ul, ol { list-style: none; }
 .phones-float {
     position: relative;
     animation: phonesFloat 7s ease-in-out infinite;
-    filter: drop-shadow(0 30px 80px rgba(0, 229, 255, 0.35))
-            drop-shadow(0 20px 40px rgba(124, 92, 255, 0.3));
+    border-radius: 24px;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    max-width: 460px;
+    margin: 0 auto;
+    border: 1px solid var(--border-strong);
+    box-shadow:
+        0 30px 80px -10px rgba(0, 229, 255, 0.35),
+        0 20px 40px -10px rgba(124, 92, 255, 0.3),
+        var(--shadow-card);
 }
 .phones-float img {
     width: 100%;
-    max-width: 620px;
-    height: auto;
-    position: relative;
-    z-index: 1;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 1.5s ease;
 }
-.phones-float::before {
-    content: '';
-    position: absolute;
-    inset: 5% -10%;
-    background:
-        radial-gradient(ellipse at 30% 50%, rgba(0, 229, 255, 0.35), transparent 60%),
-        radial-gradient(ellipse at 70% 60%, rgba(124, 92, 255, 0.4), transparent 60%);
-    filter: blur(80px);
-    z-index: 0;
-    animation: glowBreath 4s ease-in-out infinite;
-}
+.phones-float:hover img { transform: scale(1.05); }
 .phones-float::after {
     content: '';
     position: absolute;
-    left: 50%;
-    bottom: -20px;
-    transform: translateX(-50%);
-    width: 70%;
-    height: 30px;
-    background: radial-gradient(ellipse, rgba(0, 229, 255, 0.25), transparent 70%);
-    filter: blur(20px);
-    z-index: 0;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(0, 229, 255, 0.15), transparent 40%, rgba(124, 92, 255, 0.15));
+    pointer-events: none;
 }
 @keyframes phonesFloat {
     0%, 100% { transform: translateY(0) rotate(0); }
@@ -1404,35 +1397,29 @@ ul, ol { list-style: none; }
     50%      { opacity: 1;   transform: scale(1.08); }
 }
 
-/* ========== Platform media (live trading photo - transparent) ========== */
+/* ========== Platform media (HD trading screenshot) ========== */
 .platform-media {
     position: relative;
     margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    filter: drop-shadow(0 25px 50px rgba(0, 229, 255, 0.25))
-            drop-shadow(0 15px 30px rgba(124, 92, 255, 0.2));
-    animation: phonesFloat 8s ease-in-out infinite;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-card), 0 20px 60px -20px rgba(0, 229, 255, 0.3);
 }
 .platform-media img {
     width: 100%;
-    max-width: 420px;
-    height: auto;
-    position: relative;
-    z-index: 1;
+    height: 100%;
+    object-fit: cover;
     display: block;
+    transition: transform 1.2s ease;
 }
+.platform-media:hover img { transform: scale(1.05); }
 .platform-media__glow {
     position: absolute;
-    inset: 10% 5%;
-    background:
-        radial-gradient(ellipse at 40% 50%, rgba(0, 229, 255, 0.3), transparent 65%),
-        radial-gradient(ellipse at 60% 50%, rgba(124, 92, 255, 0.3), transparent 65%);
-    filter: blur(70px);
-    z-index: 0;
-    animation: glowBreath 5s ease-in-out infinite;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,229,255,.12), transparent 50%, rgba(124,92,255,.12));
+    pointer-events: none;
 }
 
 /* ========== City banner ========== */
@@ -1481,41 +1468,35 @@ ul, ol { list-style: none; }
     max-width: 420px;
 }
 
-/* ========== Coins banner (floating coins, no frame) ========== */
+/* ========== Coins banner (HD chart candles) ========== */
 .coins-banner {
     position: relative;
     margin: 0 auto 48px;
-    max-width: 760px;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: coinsZoom 12s ease-in-out infinite;
-    filter: drop-shadow(0 25px 50px rgba(255, 196, 119, 0.25))
-            drop-shadow(0 15px 30px rgba(0, 229, 255, 0.15));
+    max-width: 900px;
+    aspect-ratio: 21/8;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-card);
 }
 .coins-banner img {
     width: 100%;
-    max-width: 680px;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    position: relative;
-    z-index: 1;
+    animation: coinsZoom 20s ease-in-out infinite;
 }
 .coins-banner__fade {
     position: absolute;
-    inset: 10% 5%;
+    inset: 0;
     background:
-        radial-gradient(ellipse at 50% 60%, rgba(255, 196, 119, 0.3), transparent 65%),
-        radial-gradient(ellipse at 30% 40%, rgba(0, 229, 255, 0.2), transparent 65%);
-    filter: blur(70px);
+        radial-gradient(ellipse at center, transparent 30%, rgba(10, 11, 30, 0.7) 100%),
+        linear-gradient(180deg, transparent 50%, rgba(10, 11, 30, 0.5));
     pointer-events: none;
-    z-index: 0;
-    animation: glowBreath 6s ease-in-out infinite;
 }
 @keyframes coinsZoom {
-    0%, 100% { transform: translateY(0) rotate(0); }
-    50%      { transform: translateY(-10px) rotate(0.5deg); }
+    0%, 100% { transform: scale(1) translateX(0); }
+    50%      { transform: scale(1.08) translateX(-1%); }
 }
 
 /* ========== Feature highlight (bitcoin chart) ========== */
@@ -1533,57 +1514,37 @@ ul, ol { list-style: none; }
     position: relative;
     max-width: 460px;
     margin: 0 auto;
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    aspect-ratio: 4/3;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(255, 196, 119, 0.3);
+    box-shadow: var(--shadow-card), 0 30px 70px -20px rgba(255, 196, 119, 0.35);
     animation: coinFloat 6s ease-in-out infinite;
-    filter: drop-shadow(0 40px 80px rgba(255, 196, 119, 0.35))
-            drop-shadow(0 20px 40px rgba(255, 149, 0, 0.2));
 }
 .highlight__media img {
-    width: 75%;
-    height: auto;
-    position: relative;
-    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
+    transition: transform 1.2s ease;
 }
-.highlight__media::before {
+.highlight__media:hover img { transform: scale(1.06); }
+.highlight__media::after {
     content: '';
     position: absolute;
-    inset: 15%;
-    background: radial-gradient(circle, rgba(255, 196, 119, 0.4), transparent 65%);
-    filter: blur(60px);
-    z-index: 0;
-    animation: glowBreath 4s ease-in-out infinite;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 196, 119, 0.12), transparent 50%, rgba(0, 229, 255, 0.08));
+    pointer-events: none;
 }
 .highlight__orbit {
     position: absolute;
-    inset: 5%;
-    border: 1px dashed rgba(255, 196, 119, 0.35);
+    inset: -5%;
+    border: 1px dashed rgba(255, 196, 119, 0.4);
     border-radius: 50%;
     animation: orbit 30s linear infinite;
     pointer-events: none;
-    z-index: 1;
-}
-.highlight__orbit::before,
-.highlight__orbit::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    background: var(--gradient);
-    box-shadow: 0 0 15px rgba(0, 229, 255, 0.8);
-}
-.highlight__orbit::before {
-    width: 10px; height: 10px;
-    top: 0; left: 50%;
-    transform: translateX(-50%);
-}
-.highlight__orbit::after {
-    width: 6px; height: 6px;
-    bottom: 10%; right: 15%;
-    background: #FFD166;
-    box-shadow: 0 0 10px #FFD166;
+    z-index: -1;
+    opacity: 0.5;
 }
 @keyframes coinFloat {
     0%, 100% { transform: translateY(0) rotate(-1deg); }
