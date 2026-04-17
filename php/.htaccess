@@ -1,0 +1,9 @@
+# A submissions.csv védelme — ne legyen elérhető weben
+<Files "submissions.csv">
+    Require all denied
+</Files>
+
+# Biztonság: csak PHP-fájlok hozzáférhetők a php/ alatt
+<FilesMatch "\.(csv|log|bak|old|sql|md)$">
+    Require all denied
+</FilesMatch>

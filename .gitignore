@@ -1,0 +1,12 @@
+# PHP submissions log — ни в коем случае не коммитим
+php/submissions.csv
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary
+*.log
+*.bak

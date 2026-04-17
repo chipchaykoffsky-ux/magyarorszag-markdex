@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magyarország MarkDex — Intelligens kriptokereskedés Magyarországon</title>
+    <meta name="description" content="A Magyarország MarkDex modern kripto-platform magyar befektetőknek. AI-alapú kereskedés, személyre szabott stratégia, transzparens díjak.">
+    <meta name="theme-color" content="#0a0b1e">
+
+    <meta property="og:title" content="Magyarország MarkDex — Intelligens kriptokereskedés">
+    <meta property="og:description" content="AI-alapú kripto-kereskedés magyar felhasználóknak. Kezdje el néhány perc alatt.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="hu_HU">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+
+<!-- Background orbs -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-orb bg-orb--1" aria-hidden="true"></div>
+<div class="bg-orb bg-orb--2" aria-hidden="true"></div>
+
+<!-- Header -->
+<header class="header" id="header">
+    <div class="container header__inner">
+        <a href="#top" class="logo" aria-label="Magyarország MarkDex">
+            <svg class="logo__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <defs>
+                    <linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#00E5FF"/>
+                        <stop offset="1" stop-color="#7C5CFF"/>
+                    </linearGradient>
+                </defs>
+                <path d="M4 26V6l8 10 8-10v20" stroke="url(#lg1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="24" cy="22" r="4" stroke="url(#lg1)" stroke-width="2.5"/>
+            </svg>
+            <span class="logo__text">Magyarország <em>MarkDex</em></span>
+        </a>
+        <nav class="nav" aria-label="Fő navigáció">
+            <a href="#platform">Platform</a>
+            <a href="#hogyan">Hogyan működik</a>
+            <a href="#kriptok">Kriptovaluták</a>
+            <a href="#gyik">GYIK</a>
+        </nav>
+        <a href="#regisztracio" class="btn btn--primary btn--sm">Regisztráció</a>
+        <button class="nav-toggle" aria-label="Menü" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main id="top">
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container hero__inner">
+        <div class="hero__content">
+            <span class="badge">
+                <span class="badge__dot"></span>
+                Élő platform · Magyar nyelven
+            </span>
+            <h1 class="hero__title">
+                Intelligens <span class="text-gradient">kriptokereskedés</span> magyar befektetőknek
+            </h1>
+            <p class="hero__subtitle">
+                Csatlakozzon a Magyarország MarkDex-hez, és fedezze fel az automatizált kriptokereskedés új generációját — biztonságosan, átláthatóan, magyarul.
+            </p>
+            <div class="hero__pitch">
+                <p class="hero__pitch-title">
+                    Szeretne havi <span class="text-gradient">1 000 000+ Ft</span> extra jövedelmet?
+                </p>
+                <p class="hero__pitch-sub">Megmutatjuk, hogyan kezdheti el már ma.</p>
+                <p class="hero__pitch-note">
+                    <span class="badge__dot"></span>
+                    A regisztráció nyitva áll
+                </p>
+            </div>
+            <div class="hero__cta">
+                <a href="#regisztracio" class="btn btn--primary btn--lg">
+                    Ingyenes regisztráció
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+                <a href="#platform" class="btn btn--ghost btn--lg">Tudjon meg többet</a>
+            </div>
+            <ul class="hero__stats">
+                <li><strong>24/7</strong><span>Piaci hozzáférés</span></li>
+                <li><strong>0 Ft</strong><span>Regisztrációs díj</span></li>
+                <li><strong>30+</strong><span>Kriptovaluta</span></li>
+            </ul>
+        </div>
+
+        <aside class="hero__form" id="regisztracio">
+            <form class="form" id="signup-form" novalidate>
+                <header class="form__head">
+                    <h2>Kezdjük el</h2>
+                    <p>Töltse ki az adatait, és pár perc múlva elindulhat.</p>
+                </header>
+
+                <div class="form__row">
+                    <label class="field">
+                        <span class="field__label">Keresztnév</span>
+                        <input type="text" name="firstName" autocomplete="given-name" required minlength="2">
+                        <span class="field__error" data-error-for="firstName"></span>
+                    </label>
+                    <label class="field">
+                        <span class="field__label">Vezetéknév</span>
+                        <input type="text" name="lastName" autocomplete="family-name" required minlength="2">
+                        <span class="field__error" data-error-for="lastName"></span>
+                    </label>
+                </div>
+
+                <label class="field">
+                    <span class="field__label">E-mail cím</span>
+                    <input type="email" name="email" autocomplete="email" required>
+                    <span class="field__error" data-error-for="email"></span>
+                </label>
+
+                <label class="field">
+                    <span class="field__label">Telefonszám</span>
+                    <input type="tel" name="phone" autocomplete="tel" required pattern="[+0-9\s\-()]{7,}">
+                    <span class="field__error" data-error-for="phone"></span>
+                </label>
+
+                <label class="field field--checkbox">
+                    <input type="checkbox" name="consent" required>
+                    <span>Elfogadom az <a href="#">Adatvédelmi irányelveket</a> és az <a href="#">ÁSZF</a>-et.</span>
+                </label>
+
+                <!-- Honeypot -->
+                <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp">
+
+                <button type="submit" class="btn btn--primary btn--block btn--lg">
+                    <span class="btn__label">Regisztrálok most</span>
+                    <span class="btn__spinner" aria-hidden="true"></span>
+                </button>
+
+                <p class="form__note">Adatai titkosítva vannak. Soha nem adjuk ki harmadik félnek.</p>
+
+                <div class="form__status" role="status" aria-live="polite"></div>
+            </form>
+        </aside>
+    </div>
+</section>
+
+<!-- Showcase phones -->
+<section class="showcase">
+    <div class="container showcase__inner">
+        <div class="showcase__text">
+            <span class="eyebrow">Mobil platform</span>
+            <h2 class="h2">A kereskedés a <span class="text-gradient">zsebében</span></h2>
+            <p class="lead">Teljes funkcionalitású MarkDex-alkalmazás iOS-re és Androidra. Valós idejű árfolyamok, rendelések, portfólió — egyetlen koppintásra.</p>
+            <div class="showcase__stats">
+                <div><strong>4.8</strong><span>App Store értékelés</span></div>
+                <div><strong>&lt;120 ms</strong><span>Rendelés végrehajtás</span></div>
+            </div>
+        </div>
+        <div class="showcase__visual">
+            <div class="phones-float">
+                <img src="assets/images/refs/phones-nobg.png" alt="Magyarország MarkDex mobilalkalmazás" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust bar -->
+<section class="trust">
+    <div class="container">
+        <p class="trust__label">Miért választják a magyar felhasználók</p>
+        <div class="trust__grid">
+            <div class="trust__item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+                <strong>Banki szintű titkosítás</strong>
+                <span>SSL + kétlépcsős hitelesítés minden fiókhoz.</span>
+            </div>
+            <div class="trust__item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <strong>Villámgyors végrehajtás</strong>
+                <span>Valós idejű piaci adatok és ajánlatok.</span>
+            </div>
+            <div class="trust__item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+                <strong>Transzparens díjak</strong>
+                <span>Nincsenek rejtett költségek — tisztán látja, mit fizet.</span>
+            </div>
+            <div class="trust__item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 20h5v-2a4 4 0 0 0-3-4M9 20H2v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2zM9 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM17 8a4 4 0 1 0 0-4"/></svg>
+                <strong>Magyar nyelvű támogatás</strong>
+                <span>Emberi ügyfélszolgálat, nem chatbot.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Platform -->
+<section class="section" id="platform">
+    <div class="container grid-2">
+        <div>
+            <span class="eyebrow">A platform</span>
+            <h2 class="h2">Egy modern <span class="text-gradient">kripto-ökoszisztéma</span>, magyar mértékkel</h2>
+            <p class="lead">
+                A Magyarország MarkDex az algoritmikus kereskedés erejét hozza el a hétköznapi befektetők számára. Nem kell programoznia, nem kell grafikonokat olvasnia — a rendszer a háttérben dolgozik, miközben Ön a valódi életét éli.
+            </p>
+            <ul class="feature-list">
+                <li><strong>Adaptív AI-stratégiák</strong> — a piac minden mozdulatára reagál.</li>
+                <li><strong>Egyszerű onboarding</strong> — három lépésben indul.</li>
+                <li><strong>Részletes jelentések</strong> — mindig látja, mi történik a pénzével.</li>
+            </ul>
+            <a href="#regisztracio" class="btn btn--primary">Kezdés a befektetéssel</a>
+        </div>
+        <div class="platform-visual">
+            <div class="platform-media">
+                <img src="assets/images/refs/mobile-trading-nobg.png" alt="Élő kereskedési felület" loading="lazy">
+                <div class="platform-media__glow" aria-hidden="true"></div>
+            </div>
+            <div class="platform-card">
+                <div class="platform-card__head">
+                    <div class="dot dot--red"></div>
+                    <div class="dot dot--yellow"></div>
+                    <div class="dot dot--green"></div>
+                    <span>MarkDex Terminal</span>
+                </div>
+                <div class="platform-card__body">
+                    <div class="price-row">
+                        <span class="price-row__asset">BTC/HUF</span>
+                        <span class="price-row__value">24 812 440</span>
+                        <span class="price-row__change up">+2,41%</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-row__asset">ETH/HUF</span>
+                        <span class="price-row__value">1 341 220</span>
+                        <span class="price-row__change up">+1,78%</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-row__asset">SOL/HUF</span>
+                        <span class="price-row__value">62 145</span>
+                        <span class="price-row__change down">−0,94%</span>
+                    </div>
+                    <svg class="spark" viewBox="0 0 300 80" preserveAspectRatio="none" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="sp1" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#00E5FF" stop-opacity=".45"/>
+                                <stop offset="1" stop-color="#00E5FF" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M0,60 L30,52 L60,56 L90,40 L120,44 L150,28 L180,34 L210,22 L240,30 L270,14 L300,20 L300,80 L0,80 Z" fill="url(#sp1)"/>
+                        <path d="M0,60 L30,52 L60,56 L90,40 L120,44 L150,28 L180,34 L210,22 L240,30 L270,14 L300,20" stroke="#00E5FF" stroke-width="2" fill="none"/>
+                    </svg>
+                    <div class="platform-card__footer">
+                        <span class="pulse"></span> Élő piac · frissítve most
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Steps -->
+<section class="section section--alt" id="hogyan">
+    <div class="container">
+        <div class="city-banner">
+            <img src="assets/images/refs/city.png" alt="Nemzetközi piacok valós időben" loading="lazy">
+            <div class="city-banner__overlay">
+                <p class="city-banner__title">A világ piacai — egy helyen</p>
+                <p class="city-banner__sub">24/7 hozzáférés a kriptovalutákhoz, bárhol is legyen.</p>
+            </div>
+        </div>
+        <header class="section__head">
+            <span class="eyebrow">Három lépés</span>
+            <h2 class="h2">Kezdje el <span class="text-gradient">pár perc alatt</span></h2>
+            <p class="lead">A regisztrációtól az első kereskedésig egyetlen délután elég.</p>
+        </header>
+        <ol class="steps">
+            <li class="steps__item">
+                <div class="steps__num">01</div>
+                <h3>Fiók létrehozása</h3>
+                <p>Töltse ki az űrlapot, erősítse meg az e-mail címét. Nem kell dokumentumokkal bajlódnia az első lépésnél.</p>
+            </li>
+            <li class="steps__item">
+                <div class="steps__num">02</div>
+                <h3>Kezdőbefizetés</h3>
+                <p>Válassza ki a kényelmes fizetési módot — banki utalás, bankkártya vagy elektronikus pénztárca.</p>
+            </li>
+            <li class="steps__item">
+                <div class="steps__num">03</div>
+                <h3>Indítsa el a kereskedést</h3>
+                <p>Válasszon stratégiát, vagy bízza az AI-ra. Az eredményeket a műszerfalán követheti.</p>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- Benefits -->
+<section class="section">
+    <div class="container">
+        <header class="section__head">
+            <span class="eyebrow">Előnyök</span>
+            <h2 class="h2">Miért a Magyarország MarkDex?</h2>
+        </header>
+        <div class="cards">
+            <article class="card">
+                <div class="card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>Intelligens automatizálás</h3>
+                <p>Az algoritmus 0–24-ben figyeli a piacot, és azonnal reagál a lehetőségekre — Önnek nem kell a képernyő előtt ülnie.</p>
+            </article>
+            <article class="card">
+                <div class="card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                </div>
+                <h3>Gyors végrehajtás</h3>
+                <p>Milliszekundum alatti válaszidő — fontos másodpercek a volatilis kripto-piacon.</p>
+            </article>
+            <article class="card">
+                <div class="card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z"/></svg>
+                </div>
+                <h3>Többszintű biztonság</h3>
+                <p>2FA, cold storage, rendszeres biztonsági auditok. Az eszközei több rétegnyi védelem mögött.</p>
+            </article>
+            <article class="card">
+                <div class="card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h18v18H3z"/><path d="M9 9h6v6H9z"/></svg>
+                </div>
+                <h3>Diverzifikált portfólió</h3>
+                <p>30+ vezető kriptovaluta. Csökkentse a kockázatot úgy, hogy több eszközre oszlik a befektetése.</p>
+            </article>
+            <article class="card">
+                <div class="card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+                </div>
+                <h3>Magyar nyelvű felület</h3>
+                <p>Minden funkció, minden jelentés magyar nyelven — nincs fordítási káosz.</p>
+            </article>
+            <article class="card">
+                <div class="card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 7L9 18l-5-5"/></svg>
+                </div>
+                <h3>Nincs rejtett költség</h3>
+                <p>Átlátható díjszabás előre. Soha ne legyen meglepetés a kimutatásában.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Crypto palette -->
+<section class="section section--alt" id="kriptok">
+    <div class="container">
+        <header class="section__head">
+            <span class="eyebrow">Eszközök</span>
+            <h2 class="h2">Kriptovaluták, amelyekkel <span class="text-gradient">dolgozhat</span></h2>
+            <p class="lead">A legnépszerűbb érmék — valós idejű árfolyamon, magyar forintban elszámolva.</p>
+        </header>
+
+        <div class="coins-banner">
+            <img src="assets/images/refs/coins-nobg.png" alt="Kriptovaluták palettája" loading="lazy">
+            <div class="coins-banner__fade" aria-hidden="true"></div>
+        </div>
+
+        <div class="crypto-grid">
+            <div class="crypto"><span class="crypto__sym" style="background:linear-gradient(135deg,#F7931A,#FFB84D)">₿</span><div><strong>Bitcoin</strong><span>BTC</span></div></div>
+            <div class="crypto"><span class="crypto__sym" style="background:linear-gradient(135deg,#627EEA,#8A9EF5)">Ξ</span><div><strong>Ethereum</strong><span>ETH</span></div></div>
+            <div class="crypto"><span class="crypto__sym" style="background:linear-gradient(135deg,#9945FF,#14F195)">◎</span><div><strong>Solana</strong><span>SOL</span></div></div>
+            <div class="crypto"><span class="crypto__sym" style="background:linear-gradient(135deg,#0033AD,#3468D1)">₳</span><div><strong>Cardano</strong><span>ADA</span></div></div>
+            <div class="crypto"><span class="crypto__sym" style="background:linear-gradient(135deg,#E6007A,#FF4FA3)">●</span><div><strong>Polkadot</strong><span>DOT</span></div></div>
+            <div class="crypto"><span class="crypto__sym" style="background:linear-gradient(135deg,#375BD2,#5B82E4)">◆</span><div><strong>Chainlink</strong><span>LINK</span></div></div>
+            <div class="crypto"><span class="crypto__sym" style="background:linear-gradient(135deg,#2A5ADA,#4C7AE8)">✕</span><div><strong>XRP</strong><span>XRP</span></div></div>
+            <div class="crypto"><span class="crypto__sym" style="background:linear-gradient(135deg,#C3A634,#E8C547)">Ł</span><div><strong>Litecoin</strong><span>LTC</span></div></div>
+            <div class="crypto"><span class="crypto__sym" style="background:linear-gradient(135deg,#F0B90B,#FFCF40)">◈</span><div><strong>BNB</strong><span>BNB</span></div></div>
+            <div class="crypto"><span class="crypto__sym" style="background:linear-gradient(135deg,#13B5EC,#3DD2FF)">▲</span><div><strong>Stellar</strong><span>XLM</span></div></div>
+        </div>
+        <p class="crypto__more">és további 20+ kriptovaluta a platformon</p>
+    </div>
+</section>
+
+<!-- Feature highlight -->
+<section class="highlight">
+    <div class="container highlight__inner">
+        <div class="highlight__media">
+            <img src="assets/images/refs/bitcoin-chart-nobg.png" alt="Bitcoin gyertyadiagram" loading="lazy">
+            <div class="highlight__orbit"></div>
+        </div>
+        <div class="highlight__text">
+            <span class="eyebrow">Piaci intelligencia</span>
+            <h2 class="h2">Adat-vezérelt <span class="text-gradient">döntések</span>, nem találgatás</h2>
+            <p class="lead">A MarkDex rendszere másodpercenként elemzi a globális piaci mozgásokat, és valós idejű jelzésekkel segít időzíteni a lépéseit.</p>
+            <ul class="feature-list">
+                <li><strong>Gyertyadiagram-elemzés</strong> — több időkeret, automatikus mintázatfelismerés.</li>
+                <li><strong>Volatilitási riasztások</strong> — azonnali push-értesítés a fontos mozgásokról.</li>
+                <li><strong>Történelmi minták</strong> — a múlt trendjei az Ön döntéseinek szolgálatában.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section">
+    <div class="container">
+        <header class="section__head">
+            <span class="eyebrow">Felhasználói vélemények</span>
+            <h2 class="h2">Valós tapasztalatok <span class="text-gradient">magyar befektetőktől</span></h2>
+        </header>
+        <div class="testimonials">
+            <figure class="quote">
+                <blockquote>„Hónapok óta használom — végre egy magyar nyelvű felület, ahol nem kell az angol szaknyelven fennakadni. Az AI-stratégiák meggyőzően működnek.”</blockquote>
+                <figcaption>
+                    <span class="avatar" style="background:linear-gradient(135deg,#00E5FF,#7C5CFF)">KT</span>
+                    <div><strong>Katona Tamás</strong><span>Budapest</span></div>
+                </figcaption>
+            </figure>
+            <figure class="quote">
+                <blockquote>„Eleinte óvatos voltam, de az átlátható díjszabás és a gyors ügyfélszolgálat meggyőzött. Ajánlom annak, aki most kezdi.”</blockquote>
+                <figcaption>
+                    <span class="avatar" style="background:linear-gradient(135deg,#7C5CFF,#FF4FA3)">SE</span>
+                    <div><strong>Szabó Eszter</strong><span>Debrecen</span></div>
+                </figcaption>
+            </figure>
+            <figure class="quote">
+                <blockquote>„Amit a legjobban szeretek: a mobilalkalmazás. Bárhonnan követem a portfóliómat, és a push-értesítések időben riasztanak.”</blockquote>
+                <figcaption>
+                    <span class="avatar" style="background:linear-gradient(135deg,#14F195,#00E5FF)">NG</span>
+                    <div><strong>Nagy Gábor</strong><span>Szeged</span></div>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--alt" id="gyik">
+    <div class="container faq">
+        <header class="section__head">
+            <span class="eyebrow">GYIK</span>
+            <h2 class="h2">Gyakori kérdések</h2>
+            <p class="lead">Ha nem találja a válaszát, írjon nekünk — magyarul válaszolunk.</p>
+        </header>
+        <div class="accordion">
+            <details class="accordion__item">
+                <summary>Mi az a Magyarország MarkDex?</summary>
+                <p>Egy automatizált kripto-kereskedési platform, amely AI-algoritmusokat kínál magyar befektetők számára — teljesen magyar nyelvű felülettel és támogatással.</p>
+            </details>
+            <details class="accordion__item">
+                <summary>Szükséges-e előzetes tapasztalat?</summary>
+                <p>Nem. A platformot úgy terveztük, hogy kezdők és haladók egyaránt használhassák. Az AI-asszisztens vezeti Önt végig az első kereskedésen.</p>
+            </details>
+            <details class="accordion__item">
+                <summary>Hogyan tudok pénzt befizetni és kivenni?</summary>
+                <p>Támogatjuk a banki átutalást, a bankkártyás fizetést és a vezető elektronikus pénztárcákat. A kivétel ugyanazokon a csatornákon történik — általában 1–3 munkanapon belül.</p>
+            </details>
+            <details class="accordion__item">
+                <summary>Milyen díjakkal kell számolnom?</summary>
+                <p>Nincs regisztrációs és számlavezetési díj. Csak a sikeres kereskedések után számítunk fel transzparens tranzakciós díjat, amelyet előre megmutatunk.</p>
+            </details>
+            <details class="accordion__item">
+                <summary>Biztonságos-e a platform?</summary>
+                <p>Igen. Banki szintű SSL-titkosítást, kétlépcsős hitelesítést és az eszközök nagy részét offline tárolást (cold storage) alkalmazunk. Rendszeres biztonsági auditokat végzünk.</p>
+            </details>
+            <details class="accordion__item">
+                <summary>Van-e mobilalkalmazás?</summary>
+                <p>A platform reszponzív webes felületen is teljes értékűen működik mobilon, emellett iOS és Android alkalmazás is elérhető.</p>
+            </details>
+            <details class="accordion__item">
+                <summary>Milyen kriptovalutákkal kereskedhetek?</summary>
+                <p>Több mint 30 vezető kriptovaluta áll rendelkezésre, köztük a Bitcoin, Ethereum, Solana, Cardano és Polkadot. A lista folyamatosan bővül.</p>
+            </details>
+            <details class="accordion__item">
+                <summary>Hogyan kezdhetem el?</summary>
+                <p>Egyszerűen töltse ki a regisztrációs űrlapot az oldal tetején, erősítse meg az e-mail címét, és máris elindulhat. A teljes folyamat 5–10 percet vesz igénybe.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="cta-final">
+    <div class="container cta-final__inner">
+        <div>
+            <h2 class="h2">Készen áll a <span class="text-gradient">következő lépésre?</span></h2>
+            <p class="lead">Hozzon létre ingyenes fiókot, és fedezze fel a modern kripto-kereskedés erejét a Magyarország MarkDex segítségével.</p>
+            <a href="#regisztracio" class="btn btn--primary btn--lg">Regisztráció indítása</a>
+        </div>
+        <div class="cta-final__card">
+            <div class="guide-cover">
+                <img src="assets/images/refs/guide.png" alt="Cryptocurrency Investment Guide" loading="lazy">
+                <div class="guide-cover__badges">
+                    <span class="guide-cover__eyebrow">Ingyenes útmutató</span>
+                    <ul class="guide-cover__list">
+                        <li>A legfontosabb alapfogalmak</li>
+                        <li>Kockázatkezelés magyarul</li>
+                        <li>Első 30 nap terv</li>
+                    </ul>
+                    <span class="guide-cover__badge">PDF · 24 oldal</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container cta-final__pitch">
+        <p class="cta-final__pitch-lead">
+            Regisztráljon még ma a Magyarország MarkDex-nél, és <strong>számlamenedzsere felhívja Önt</strong>, hogy azonnal elkezdhessen pénzt keresni.
+        </p>
+
+        <div class="pitch-card">
+            <div class="pitch-card__glow" aria-hidden="true"></div>
+            <ul class="pitch-card__list">
+                <li>
+                    <span class="pitch-check" aria-hidden="true"></span>
+                    <span>Tegye meg az első lépést a befektetések világába — fedezzen fel egy új bevételi lehetőséget.</span>
+                </li>
+                <li>
+                    <span class="pitch-check" aria-hidden="true"></span>
+                    <span>Már <strong>90&nbsp;000 forinttal</strong> is elkezdheti.</span>
+                </li>
+                <li>
+                    <span class="pitch-check" aria-hidden="true"></span>
+                    <span>Egyszerűen, <strong>személyes támogatással</strong> végig az úton.</span>
+                </li>
+            </ul>
+        </div>
+
+        <a href="#regisztracio" class="btn btn--primary btn--xl cta-final__btn">
+            <span>Regisztráljon most</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+
+        <!-- Attention-grabbing animated ticker -->
+        <div class="attention" aria-hidden="true">
+            <div class="attention__scroll">
+                <span>Ingyenes regisztráció</span>
+                <span>Már 90 000 Ft-tól</span>
+                <span>Személyes számlamenedzser</span>
+                <span>Magyar nyelvű támogatás</span>
+                <span>24/7 piaci hozzáférés</span>
+                <span>Ingyenes regisztráció</span>
+                <span>Már 90 000 Ft-tól</span>
+                <span>Személyes számlamenedzser</span>
+                <span>Magyar nyelvű támogatás</span>
+                <span>24/7 piaci hozzáférés</span>
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <span>Görgessen a regisztrációhoz</span>
+            <div class="scroll-hint__mouse">
+                <div class="scroll-hint__wheel"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <div>
+            <a href="#top" class="logo logo--light">
+                <svg class="logo__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <path d="M4 26V6l8 10 8-10v20" stroke="url(#lg1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="24" cy="22" r="4" stroke="url(#lg1)" stroke-width="2.5"/>
+                </svg>
+                <span class="logo__text">Magyarország <em>MarkDex</em></span>
+            </a>
+            <p class="footer__tag">Intelligens kripto-kereskedés magyar befektetőknek.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Lábléc">
+            <div>
+                <h4>Platform</h4>
+                <a href="#platform">Funkciók</a>
+                <a href="#kriptok">Kriptovaluták</a>
+                <a href="#hogyan">Hogyan működik</a>
+            </div>
+            <div>
+                <h4>Vállalat</h4>
+                <a href="#">Rólunk</a>
+                <a href="#">Kapcsolat</a>
+                <a href="#gyik">GYIK</a>
+            </div>
+            <div>
+                <h4>Jogi</h4>
+                <a href="#">Adatvédelem</a>
+                <a href="#">ÁSZF</a>
+                <a href="#">Cookie szabályzat</a>
+            </div>
+        </nav>
+    </div>
+    <div class="container footer__bottom">
+        <p>© <span id="year"></span> Magyarország MarkDex. Minden jog fenntartva.</p>
+        <p class="footer__disclaimer">A kriptovalutákba való befektetés kockázattal jár. Csak olyan összeget fektessen be, amelyet hajlandó elveszíteni.</p>
+    </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
